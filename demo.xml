@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	
+	<!-- global parameter -->
+	<parameter name="URL" value="http://www.tutorialsninja.com/demo/"></parameter>
+	
+	<!-- Event listener -->
+	<listeners>
+		<listener class-name="package_name.class_name"></listener>
+	</listeners>
+	
+	<!-- for grouping -->
+	<groups>
+		<run>
+			<include name="smoke,sanity"></include>
+			<exclude name="regression"></exclude>
+		</run>
+	</groups>
+	
+	<!-- test modules -->
+	<test thread-count="2" parallel="methods" name="Test">
+		<!-- locak parameter -->
+	<parameter name="URL" value="http://www.tutorialsninja.com/demo/"></parameter>
+		<classes>
+			<class name="package_name.class_name" />
+			<class name="package_name.class_name" />
+			<class name="package_name.class_name" />
+		</classes>
+	</test>
+	<test thread-count="2" parallel="methods" name="Test2">
+		<classes>
+			<class name="package_name.class_name" />
+			<class name="package_name.class_name">
+				<methods>
+					<include name="method_name"></include> <!-- method want to include or exclude -->
+				</methods>
+			</class>
+			<class name="package_name.class_name" />
+		</classes>
+	</test>
+	<test thread-count="2" parallel="methods" name="package">
+		<packages>
+			<package name="package_name">
+				<exclude name="package_name.class_name"></exclude>
+			</package>
+		</packages>
+	</test>
+</suite>
