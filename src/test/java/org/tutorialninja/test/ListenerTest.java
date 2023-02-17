@@ -16,6 +16,8 @@ public class ListenerTest implements ITestListener{
 	
 	public void onTestSuccess(ITestResult result) {
 		System.out.println("Test is passed");
+		System.out.println("Test is passed");
+		System.out.println("Test is passed");
 	}
 	
 	public void onFinish(ITestContext context) {
