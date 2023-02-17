@@ -53,10 +53,13 @@ public class LoginTest {
 		Boolean breadCrumb = driver.findElement(By.xpath("//ul[@class='breadcrumb']//a[text()='Account']"))
 				.isDisplayed();
 		Assert.assertTrue(breadCrumb); // this will pass
+		
+		// this is just for practice purpose
 		driver.findElement(By.linkText("Components")).click();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Monitors (2)")));
 		driver.findElement(By.linkText("Monitors (2)")).click();
+		
 		
 	}
 
