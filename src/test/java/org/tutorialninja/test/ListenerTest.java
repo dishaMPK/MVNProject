@@ -8,6 +8,10 @@ public class ListenerTest implements ITestListener{
 
 	public void onTestStart(ITestResult result) {
 		System.out.println("Test is started");
+		System.out.println("Test is started");
+		System.out.println("Test is started");
+		System.out.println("Test is started");
+		System.out.println("Test is started");
 	}
 	
 	public void onTestFailure(ITestResult result) {
