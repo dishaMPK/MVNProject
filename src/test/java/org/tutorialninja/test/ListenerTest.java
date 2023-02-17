@@ -12,6 +12,8 @@ public class ListenerTest implements ITestListener{
 	
 	public void onTestFailure(ITestResult result) {
 		System.out.println("Test is failed");
+		System.out.println("Test is failed");
+		System.out.println("Test is failed");
 	}
 	
 	public void onTestSuccess(ITestResult result) {
